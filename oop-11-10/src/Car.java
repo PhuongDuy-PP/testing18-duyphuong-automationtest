@@ -1,6 +1,32 @@
+
 public class Car extends Vehicle{
-    int seats;
-    String fuelType;
+    private int seats;
+    private String fuelType;
+
+    public int getSeats() {
+        return seats;
+    }
+
+//    khi class cha có ham abstract
+//    => class con phai define lại hàm đó, cùng kiểu dữ liệu, cùng tên hàm
+//    @Override để đánh dấu hàm này là của class cha
+    @Override
+    public void getInfor(){
+        System.out.println("Seats: " + seats);
+        System.out.println("Fuel type: " + fuelType);
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
+    }
 
     public Car(){
         super(); // kế thừa hàm khởi tạo ko tham số của class cha
